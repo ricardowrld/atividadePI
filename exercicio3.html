@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrecadação da Padaria</title>
+</head>
+<body>
+    <h2>Arrecadação da Padaria</h2>
+    Pães: <input type="number" id="quantidadePães"><br>
+    Broas: <input type="number" id="quantidadeBroas"><br>
+    <button onclick="calcularArrecadacao()">Calcular Arrecadação</button>
+    <p id="resultadoArrecadacao"></p>
+
+    <script>
+        function calcularArrecadacao() {
+            const quantidadePães = document.getElementById("quantidadePães").value;
+            const quantidadeBroas = document.getElementById("quantidadeBroas").value;
+            const precoPao = 0.12;
+            const precoBroa = 1.50;
+
+            const totalArrecadado = (quantidadePães * precoPao) + (quantidadeBroas * precoBroa);
+            const poupanca = totalArrecadado * 0.10;
+
+            document.getElementById("resultadoArrecadacao").innerText = `arrecadado: R$ ${totalArrecadado.toFixed(2)}\n` + `guardar na poupança: R$ ${poupanca.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

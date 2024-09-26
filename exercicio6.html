@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Valor a Pagar em Restaurante</title>
+</head>
+<body>
+    <h2>Valor a Pagar em Restaurante</h2>
+    Peso do Prato (kg): <input type="number" id="peso"><br>
+    <button onclick="calcularValorPagar()">Calcular Valor</button>
+    <p id="resultadoValorPagar"></p>
+
+    <script>
+        function calcularValorPagar() {
+            const peso = document.getElementById("peso").value;
+            const precoPorQuilo = 12.00;
+            const valorAPagar = peso * precoPorQuilo;
+            document.getElementById("resultadoValorPagar").innerText = `O valor a pagar é: R$ ${valorAPagar.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

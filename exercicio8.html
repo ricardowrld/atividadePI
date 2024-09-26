@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Média Ponderada</title>
+</head>
+<body>
+    <h2>Exercício 8: Média Ponderada</h2>
+    <input type="number" id="nota1" >
+    <input type="number" id="nota2" >
+    <input type="number" id="nota3" >
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <p id="resultado8"></p>
+
+    <script>
+        function calcularMedia() {
+            const nota1 = parseFloat(document.getElementById('nota1').value);
+            const nota2 = parseFloat(document.getElementById('nota2').value);
+            const nota3 = parseFloat(document.getElementById('nota3').value);
+            const media = (nota1 + (nota2 * 2) + (nota3 * 3)) / 6;
+            document.getElementById('resultado8').innerText = `Média Ponderada: ${media.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

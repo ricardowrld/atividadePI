@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dias desde o Início do Ano</title>
+</head>
+<body>
+    <h2>Exercício 7: Dias desde o início do ano</h2>
+    <input type="number" id="dia" placeholder="Dia (1-30)" min="1" max="30">
+    <input type="number" id="mes" placeholder="Mês (1-12)" min="1" max="12">
+    <button onclick="calcularDias()">Calcular</button>
+    <p id="resultado7"></p>
+
+    <script>
+        function calcularDias() {
+            const dia = parseInt(document.getElementById('dia').value);
+            const mes = parseInt(document.getElementById('mes').value);
+            const diasPassados = (mes - 1) * 30 + dia;
+            document.getElementById('resultado7').innerText = `Dias desde o início do ano: ${diasPassados}`;
+        }
+    </script>
+</body>
+</html>

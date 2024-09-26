@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dias de Vida</title>
+</head>
+<body>
+    <h2>Cálculo de Dias de Vida</h2>
+    Nome: <input type="text" id="nome"><br>
+    Idade: <input type="number" id="idade"><br>
+    <button onclick="calcularDiasDeVida()">Calcular Dias de Vida</button>
+    <p id="resultadoDiasDeVida"></p>
+
+    <script>
+        function calcularDiasDeVida() {
+            const nome = document.getElementById("nome").value;
+            const idade = document.getElementById("idade").value;
+            const diasDeVida = idade * 365;
+            document.getElementById("resultadoDiasDeVida").innerText = `${nome}, VOCÊ JÁ VIVEU ${diasDeVida} DIAS`;
+        }
+    </script>
+</body>
+</html>

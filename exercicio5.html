@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Litros de Gasolina</title>
+</head>
+<body>
+    <h2>Cálculo de Litros de Gasolina</h2>
+    Preço do Litro: R$ <input type="number" id="precoLitro"><br>
+    Valor a Colocar: R$ <input type="number" id="valorPagamento"><br>
+    <button onclick="calcularLitros()">Calcular Litros</button>
+    <p id="resultadoLitros"></p>
+
+    <script>
+        function calcularLitros() {
+            const precoLitro = document.getElementById("precoLitro").value;
+            const valorPagamento = document.getElementById("valorPagamento").value;
+            const litrosColocados = valorPagamento / precoLitro;
+            document.getElementById("resultadoLitros").innerText = `Você conseguiu colocar ${litrosColocados.toFixed(2)} litros de gasolina.`;
+        }
+    </script>
+</body>
+</html>

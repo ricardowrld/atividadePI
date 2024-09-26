@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Área do Terreno</title>
+</head>
+<body>
+    <h2>Cálculo da Área do Terreno</h2>
+    Largura: <input type="number" id="largura"><br>
+    Comprimento: <input type="number" id="comprimento"><br>
+    <button onclick="calcularArea()">Calcular Área</button>
+    <p id="resultadoArea"></p>
+
+    <script>
+        function calcularArea() {
+            const largura = document.getElementById("largura").value;
+            const comprimento = document.getElementById("comprimento").value;
+            const area = largura * comprimento;
+            document.getElementById("resultadoArea").innerText = `A área do terreno é: ${area} m²`;
+        }
+    </script>
+</body>
+</html>

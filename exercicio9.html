@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Valor Arrecadado com Camisetas</title>
+</head>
+<body>
+    <h2>Exercício 9: Valor Arrecadado com Camisetas</h2>
+    <p>pequena</p>
+    <input type="number" id="pequena" > <br>
+    <p>media</p>
+    <input type="number" id="media" > <br>
+    <p>grande</p>
+    <input type="number" id="grande" > <br>
+    
+    <button onclick="calcularReceita()">Calcular Valor</button>
+    <p id="resultado9"></p>
+
+    <script>
+        function calcularReceita() {
+            const pequena = parseInt(document.getElementById('pequena').value) || 0;
+            const media = parseInt(document.getElementById('media').value) || 0;
+            const grande = parseInt(document.getElementById('grande').value) || 0;
+            const total = (pequena * 10) + (media * 12) + (grande * 15);
+            document.getElementById('resultado9').innerText = `Valor Arrecadado: R$ ${total}`;
+        }
+    </script>
+</body>
+</html>
